@@ -1,19 +1,39 @@
-#Code for Main
-extends Control
+# Godot generated files
+.godot/
+.import/
 
+# Temporary files
+*.tmp
+*.bak
+*~
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+# IDE
+.vscode/
+.idea/
 
+# Build artifacts
+build/
+dist/
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Godot editor and generated data
+/editor/
+/imported/
+/exported/
+/shader_cache/
 
+# Export credentials
+/export_credentials.cfg
 
-func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://worldd.tscn")
+# Exported game builds
+/*.exe
+/*.pck
 
-func _on_exit_pressed() -> void:
-	get_tree().quit()
+# Godot generated caches
+/shader_cache/
+/global_script_class_cache.cfg
+/scene_groups_cache.cfg
+/uid_cache.bin
+
+# Additional Godot ignores
+.godot/
+/android/

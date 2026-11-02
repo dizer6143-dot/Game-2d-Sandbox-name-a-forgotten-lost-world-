@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://Фон/videoframe_1167.png"
+source_file="res://Background/videoframe_1167.png"
 dest_files=["res://.godot/imported/videoframe_1167.png-301d48974502ea4ad39dfba0206dc1c6.ctex"]
 
 [params]

@@ -1,63 +1,68 @@
 # A Forgotten Lost World
 
-A 2D sandbox game with survival elements, built using the [Godot Engine](https://godotengine.org/).
+**A Forgotten Lost World** is a 2D sandbox game with survival elements, exploration, resource gathering, mining, and boss encounters.
 
-## About the Game
-
-**A Forgotten Lost World** is a 2D sandbox game focused on exploration, resource gathering, mining, and survival.
-
-Explore the world, collect resources, mine ores, and fight bosses as you discover what this forgotten world has to offer.
+The project is developed using the **Godot Engine**.
 
 ## Features
 
-- **2D Sandbox Gameplay** — Explore an interactive game world.
-- **Survival** — Survive and adapt to the world around you.
-- **Resource Gathering** — Collect resources for your adventures.
-- **Mining** — Discover and mine ores.
-- **Boss Battles** — Face powerful bosses.
-- **Exploration** — Explore the world and uncover its possibilities.
+- 2D sandbox gameplay
+- Survival elements
+- World exploration
+- Resource gathering
+- Mining
+- Boss encounters
 
-## Built With
+The game is currently under development.
 
-- [Godot Engine](https://godotengine.org/)
+## Technology
+
+- **Engine:** Godot Engine 4.7
+- **Project type:** 2D game
+- **License:** GNU General Public License v3.0
 
 ## Getting Started
 
-The project source code is available in this repository.
+### Requirements
 
-1. Clone the repository:
+- Godot Engine 4.7 or a compatible version.
 
-   ```bash
-   git clone https://github.com/dizer6143-dot/Game-2d-Sandbox-name-a-forgotten-lost-world-.git
-   ```
+### Installation
 
-2. Open the project using the Godot Editor.
-3. Run the project from the editor.
+Clone the repository:
 
-*Note: The exact Godot version and additional setup requirements have not yet been specified.*
+```bash
+git clone https://github.com/dizer6143-dot/Game-2d-Sandbox-name-a-forgotten-lost-world-.git
+```
 
-## Development Status
+Open the project directory using Godot Engine.
 
-The project is under development. More information about gameplay mechanics, supported platforms, and future updates will be added as development progresses.
+Select the `project.godot` file and run the project from the Godot Editor.
 
-## Platforms
+## Development
 
-Supported operating systems and platforms have not yet been officially confirmed.
+A Forgotten Lost World is an independent game project currently under development.
 
-## Contributing
+Contributions, suggestions, and feedback are welcome. Please discuss significant changes with the project maintainer before submitting them.
 
-Contributions, suggestions, and bug reports are welcome, subject to the repository owner's contribution guidelines.
+## Authors and Contributions
+
+- **DIZER** — original game developer and project author.
+- **Miryo Bun** — repository maintenance and documentation contributions.
+
+The original authorship of the game belongs to its creator.
 
 ## License
 
-No license has been specified yet. Please check this repository for licensing information before redistributing or modifying the project.
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
-## Links
+You can find the full license text in the [`LICENSE`](LICENSE) file.
 
-- **GitHub Repository:** [A Forgotten Lost World](https://github.com/dizer6143-dot/Game-2d-Sandbox-name-a-forgotten-lost-world-)
-- **Developer Profile:** [dizer6143-dot](https://github.com/dizer6143-dot)
-- **Godot Engine:** [godotengine.org](https://godotengine.org/)
+For more information, visit:
+
+https://www.gnu.org/licenses/gpl-3.0.html
 
 ---
 
-*Explore. Gather. Survive. Discover the forgotten world.*
+**A Forgotten Lost World**
+An independent 2D game project.
