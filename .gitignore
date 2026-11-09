@@ -1,39 +1,19 @@
-# Godot generated files
+# Local cache and internal Godot 4 files
 .godot/
+
+# Local editor settings (window sizes, open scripts)
 .import/
+export_presets.cfg
 
-# Temporary files
+# Temporary files and engine crash dumps
+*.log
 *.tmp
-*.bak
-*~
+*.crash
 
-# IDE
-.vscode/
-.idea/
+# Built binaries and export directories
+/build/
+/exports/
 
-# Build artifacts
-build/
-dist/
+# Local environment variables
+.env
 
-# Godot editor and generated data
-/editor/
-/imported/
-/exported/
-/shader_cache/
-
-# Export credentials
-/export_credentials.cfg
-
-# Exported game builds
-/*.exe
-/*.pck
-
-# Godot generated caches
-/shader_cache/
-/global_script_class_cache.cfg
-/scene_groups_cache.cfg
-/uid_cache.bin
-
-# Additional Godot ignores
-.godot/
-/android/
