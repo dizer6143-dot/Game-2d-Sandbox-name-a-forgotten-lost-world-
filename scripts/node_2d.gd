@@ -6,8 +6,13 @@ extends Node2D
 @export var dirt_level: int = 15
 @export var stone_level: int = 30
 
+# Subheading: Interaction Settings
+@export var max_mining_distance: float = 150.0
+
 # Subheading: References to Game Nodes
 @onready var tile_map: TileMapLayer = $WorldTileMap
+# Make sure your Player node is a child of the main scene and named "Player"
+@onready var player: CharacterBody2D = $Player
 
 # Subheading: Noise Generator for Ore Distribution
 var noise: FastNoiseLite = FastNoiseLite.new()
@@ -42,8 +47,13 @@ func generate_world() -> void:
 # Subheading: Input Handling for Mining and Placing Blocks
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		# Convert global mouse position to local TileMap grid coordinates
 		var global_mouse_pos = get_global_mouse_position()
+		
+		# Check if the player exists and the click is within the allowed mining range
+		if player and player.global_position.distance_to(global_mouse_pos) > max_mining_distance:
+			# Click is too far away, ignore the input
+			return
+			
 		var click_cell = tile_map.local_to_map(tile_map.to_local(global_mouse_pos))
 		
 		if event.button_index == MOUSE_BUTTON_LEFT:
