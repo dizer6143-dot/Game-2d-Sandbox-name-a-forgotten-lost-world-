@@ -7,16 +7,27 @@ extends CharacterBody2D
 # Subheading: Environmental Physics
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# Subheading: Camera Setup
+# This dynamically creates a Camera2D node attached to the player
+var camera: Camera2D
+
+func _ready() -> void:
+	# Initialize and configure the camera programmatically
+	camera = Camera2D.new()
+	camera.position_smoothing_enabled = true
+	camera.position_smoothing_speed = 5.0
+	add_child(camera)
+
 func _physics_process(delta: float) -> void:
 	# Add gravity if the player is currently in the air
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Handle the jump action (requires "ui_accept" or spacebar by default)
-	if input.is_action_just_pressed("ui_accept") and is_on_floor():
+	# Handle the jump action
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
-	# Get the input direction for horizontal movement (Left/Right arrows or A/D)
+	# Get the input direction for horizontal movement
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * speed
