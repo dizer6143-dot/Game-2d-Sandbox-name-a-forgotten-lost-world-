@@ -8,7 +8,6 @@ extends CharacterBody2D
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Subheading: Camera Setup
-# This dynamically creates a Camera2D node attached to the player
 var camera: Camera2D
 
 func _ready() -> void:

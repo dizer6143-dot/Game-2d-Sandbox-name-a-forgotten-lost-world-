@@ -11,7 +11,6 @@ extends Node2D
 
 # Subheading: References to Game Nodes
 @onready var tile_map: TileMapLayer = $WorldTileMap
-# Make sure your Player node is a child of the main scene and named "Player"
 @onready var player: CharacterBody2D = $Player
 
 # Subheading: Noise Generator for Ore Distribution
@@ -24,6 +23,7 @@ func _ready() -> void:
 	noise.frequency = 0.1
 	
 	generate_world()
+	spawn_player_on_surface()
 
 # Subheading: Core Generation Logic
 func generate_world() -> void:
@@ -44,6 +44,17 @@ func generate_world() -> void:
 					# Standard stone block (Atlas coords: 1, 0)
 					tile_map.set_cell(Vector2i(x, y), 0, Vector2i(1, 0))
 
+# Subheading: Player Spawning System
+func spawn_player_on_surface() -> void:
+	if player and tile_map:
+		var spawn_x = map_width / 2
+		var spawn_y = dirt_level - 2
+		# Convert map coordinates to local position context
+		var tile_size = 16
+		if tile_map.tile_set:
+			tile_size = tile_map.tile_set.tile_size.x
+		player.global_position = Vector2(spawn_x * tile_size, spawn_y * tile_size)
+
 # Subheading: Input Handling for Mining and Placing Blocks
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -51,7 +62,6 @@ func _input(event: InputEvent) -> void:
 		
 		# Check if the player exists and the click is within the allowed mining range
 		if player and player.global_position.distance_to(global_mouse_pos) > max_mining_distance:
-			# Click is too far away, ignore the input
 			return
 			
 		var click_cell = tile_map.local_to_map(tile_map.to_local(global_mouse_pos))
