@@ -17,3 +17,15 @@ export_presets.cfg
 # Local environment variables
 .env
 
+
+# Godot local cache & builds
+*.exe
+*.pck
+editor/
+exported/
+imported/
+shader_cache/
+export_credentials.cfg
+global_script_class_cache.cfg
+scene_groups_cache.cfg
+uid_cache.bin
